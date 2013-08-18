@@ -8,7 +8,7 @@ namespace ComicSorter_v2
 {
      public class AddNewFolders
      {
-          public String directory = @"F:\Wolfpack\Comics\";
+          public String directory = @"C:\temp\Comics\";//F:\Wolfpack\Comics
           public String comics2add = "comics2add.txt";
           public String comicsList = "comics list.txt";
 
@@ -21,10 +21,13 @@ namespace ComicSorter_v2
               
                List<String> directories = new List<String>(Directory.EnumerateDirectories(anf.directory));      
                anf.comicsToAdd = new List<String>(File.ReadAllLines(anf.directory + anf.comics2add));
-               anf.comics = new List<String>(File.ReadAllLines(anf.directory + anf.comics));
+               anf.comics = new List<String>(File.ReadAllLines(anf.directory + anf.comicsList));
+
+               anf.mkDirs(directories);
+               anf.repopComicsList();
           }
 
-          private void mkDirs(String[] directories)
+          private void mkDirs(List<String> directories)
           {
                for (int i = 0; i < comicsToAdd.Count; i++)
                {
@@ -44,19 +47,19 @@ namespace ComicSorter_v2
                     {
                          comics.Add(comicsToAdd[i]);
                          Console.WriteLine(comicsToAdd[i] + "added to the comics list.");
-                         comics.Sort();
                     }
                }
+
+               comics.Sort();
+
+               updateAndResetNewComicsList();
           }
 
-          private void updateComicsList()
+          private void updateAndResetNewComicsList()
           {
-
-          }
-
-          private void resetNewComicsList()//might be able to merge this with updateComicsList
-          {
-
+               File.Delete(directory + comicsList);
+               File.WriteAllLines(directory + comicsList, comics);
+               File.WriteAllText(directory + comics2add, String.Empty);
           }
      }
 }
