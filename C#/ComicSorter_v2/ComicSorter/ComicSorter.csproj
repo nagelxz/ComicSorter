@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}</ProjectGuid>
+    <ProjectGuid>{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ComicSorter_v2</RootNamespace>
-    <AssemblyName>ComicSorter_v2</AssemblyName>
+    <RootNamespace>ComicSorter</RootNamespace>
+    <AssemblyName>ComicSorter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewFolders.cs" />
+    <Compile Include="ComicSorter.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

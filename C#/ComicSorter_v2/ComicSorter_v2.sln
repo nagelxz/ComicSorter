@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicSorter_v2", "ComicSorter_v2\ComicSorter_v2.csproj", "{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryCreation", "DirectoryCreation\DirectoryCreation.csproj", "{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicSorter", "ComicSorter\ComicSorter.csproj", "{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}.Debug|x86.Build.0 = Debug|x86
 		{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}.Release|x86.ActiveCfg = Release|x86
 		{79F6B6EF-A8AB-45EC-A382-F9EE580AA442}.Release|x86.Build.0 = Release|x86
+		{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}.Debug|x86.ActiveCfg = Debug|x86
+		{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}.Debug|x86.Build.0 = Debug|x86
+		{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}.Release|x86.ActiveCfg = Release|x86
+		{003D0386-1E1D-45CA-9C5B-64BBEB6F9C04}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

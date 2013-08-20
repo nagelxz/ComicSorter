@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace ComicSorter_v2
+namespace DirectoryCreation
 {
-     public class AddNewFolders
+     class AddNewFolders
      {
           public String directory = @"C:\temp\Comics\";//F:\Wolfpack\Comics     for desktop computer
           public String comics2add = "comics2add.txt";
@@ -15,7 +15,7 @@ namespace ComicSorter_v2
           public List<String> comicsToAdd;
           public List<String> comics;
 
-          public static void Main(string[] args)
+          static void Main(string[] args)
           {
                AddNewFolders anf = new AddNewFolders();
               
