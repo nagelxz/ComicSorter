@@ -11,8 +11,8 @@ namespace ComicSorter
           {
                ComicSorter cs = new ComicSorter();
 
-               String downloadLocation = @"F:\Downloads\";
-               String holdingLocation = @"F:\Wolfpack\Comics\TO BE SORTED INTO RESPECTIVE FOLDERS";//Downloaded from unconventional means.
+               String downloadLocation = @"C:\temp\Downloads\";
+               String holdingLocation = @"C:\temp\Comics\TO BE SORTED INTO RESPECTIVE FOLDERS";//Downloaded from unconventional means.
                String userInput = "";
 
                Console.WriteLine("Where do you want to sort from?  Enter your choice:  ");
