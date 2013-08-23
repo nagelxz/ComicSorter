@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace ComicSorter
 {
@@ -44,8 +45,20 @@ namespace ComicSorter
 
                cs.folderRecursion(cs.startingDir);
 
-               //I'll write the failed files code once i get the rest working.
+               try
+               {
+                    Console.WriteLine("\n\nFailed Files:");
 
+                    foreach(String f in cs.failed)
+                    {
+                         Console.WriteLine(f);
+                    }
+
+                    File.WriteAllLines(@"C:\temp\Comics\failed files.txt", cs.failed);
+               }
+               catch (Exception ex){}
+
+               Console.ReadKey();
           }
      }
 }
