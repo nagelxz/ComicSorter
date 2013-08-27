@@ -19,12 +19,17 @@ namespace ComicSorter
           {
                directories = new List<String>(Directory.EnumerateDirectories(path).Select(d => new DirectoryInfo(d).Name));
 
-               originalFiles = new List<String>(Directory.EnumerateFiles(path).Select(f => Path.GetFileName(f)));
-               //create another function to see if the ending is not of the comic variety
-               //if not, remove from the list...not a major rush until i get it working for the files that do fit the profile
+               int subFolderFilesCount = Directory.GetFiles(path).Length;
 
-               //nameStripping(startingDir);
-               //issue surrounding this, need to work on it when I'm not at work and watching TV
+               if (subFolderFilesCount != 0 && directories.Count != 0)
+               {
+                    originalFiles = new List<String>(Directory.EnumerateFiles(path).Select(f => Path.GetFileName(f)));
+                    //create another function to see if the ending is not of the comic variety
+                    //if not, remove from the list...not a major rush until i get it working for the files that do fit the profile
+
+                    nameStripping(startingDir);
+                    //issue surrounding this, need to work on it when I'm not at work and watching TV
+               }
 
                if (directories.Count == 0)
                {
