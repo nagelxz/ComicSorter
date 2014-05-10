@@ -10,7 +10,6 @@ namespace ComicSorter
      {
           static void Main(string[] args)
           {
-               //ComicSorter cs = new ComicSorter();
                ComicSorterFresh cs = new ComicSorterFresh();
 
                String downloadLocation = @"C:\temp\Downloads\";
@@ -45,8 +44,6 @@ namespace ComicSorter
                }
 
                cs.Start();
-
-               //cs.folderRecursion(cs.startDir);
 
                //try
                //{
